@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededed"
+    android:fitsSystemWindows="true"
+    >
+
+    <include layout="@layout/layout_base_toolbar"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+        <EditText
+            android:id="@+id/feedback_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_et_white"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:hint="请输入遇到的问题和建议..."
+            android:textSize="15sp"
+            android:maxLength="400"
+            />
+
+        <TextView
+            android:id="@+id/count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="11dp"
+            android:layout_marginBottom="10dp"
+            android:text="0/400"
+            android:textSize="10sp"
+            android:textColor="@color/gray_dark"
+            />
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/default_white"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="联系电话"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/default_black"
+            />
+
+        <EditText
+            android:id="@+id/phone_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_et_white"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dp"
+            android:hint="选填，便于我们联系您"
+            android:textSize="15sp"
+            android:textColor="@color/default_black"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="11"
+            />
+
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/default_green"
+        android:textColor="@color/default_white"
+        android:textSize="15sp"
+        android:text="提交"
+        android:gravity="center"
+        android:id="@+id/sub_tv"
+        />
+
+</LinearLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    >
+
+    <include layout="@layout/layout_base_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/pdt_iv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                tools:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/pdt_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/pdt_iv"
+                android:layout_toRightOf="@+id/pdt_iv"
+                android:singleLine="true"
+                android:textColor="@color/default_black"
+                android:textSize="15sp"
+                tools:text="麦麦提贷款" />
+
+            <TextView
+                android:id="@+id/pdt_slogan_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pdt_iv"
+                android:layout_toRightOf="@+id/pdt_iv"
+                android:textColor="@color/gray_dark"
+                android:textSize="10sp"
+                tools:text="仅用身份证
+1000人已申请" />
+
+            <TextView
+                android:id="@+id/pdt_max_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdt_iv"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/default_orange"
+                android:textSize="23sp"
+                tools:text="50000" />
+
+            <TextView
+                android:id="@+id/pdt_max_limit_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdt_max_limit"
+                android:layout_alignLeft="@+id/pdt_max_limit"
+                android:text="最大额度（元）"
+                android:textColor="@color/gray_dark"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/pdt_deadlin_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pdt_max_limit"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/default_orange"
+                android:textSize="20sp"
+                tools:text="7天-1年" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdt_deadlin_tv"
+                android:layout_centerHorizontal="true"
+                android:text="期限"
+                android:textColor="@color/gray_dark"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/pdt_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/pdt_max_limit"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:textColor="@color/default_orange"
+                android:textSize="20sp"
+                tools:text="0.005%" />
+
+            <TextView
+                android:id="@+id/pdt_rate_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdt_rate"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:text="参考日利率"
+                android:textColor="@color/gray_dark"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdt_max_limit_unit"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:text="申请条件"
+                android:textColor="@color/default_black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/pdt_condition_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdt_max_limit_unit"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="65dp"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/gray_light"
+                android:textSize="14sp"
+                tools:text="1、21-24岁中国大陆公民
+2、信用良好"
+                android:layout_marginRight="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdt_condition_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:text="所需材料"
+                android:textColor="@color/default_black"
+                android:textSize="16sp"
+                android:layout_marginRight="20dp"
+                />
+
+            <TextView
+                android:id="@+id/pdt_materials_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdt_condition_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="54dp"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/gray_light"
+                android:textSize="14sp"
+                tools:text="1、21-24岁中国大陆公民
+2、信用良好" />
+
+            <TextView
+                android:id="@+id/pdt_phone_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pdt_materials_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/default_green"
+                android:textSize="14sp"
+                tools:text="机构电话 888888888" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/pdt_statement"
+        android:textColor="@color/gray_dark"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/pdt_apply_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/default_green"
+        android:gravity="center"
+        android:text="立即申请"
+        android:textColor="@color/default_white"
+        android:textSize="17sp" />
+
+</LinearLayout>

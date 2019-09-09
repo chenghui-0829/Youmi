@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/pop_lin" />
+
+    <com.liangzhiyang.youmi.view.MultiLineRadioGroup
+        android:id="@+id/feature_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/default_white"
+        app:child_count="6"
+        app:child_layout="@layout/item_feature"
+        app:child_margin_horizontal="12dp"
+        app:child_margin_vertical="15dp"
+        app:child_values="@array/feature_array"
+        app:gravity="1"
+        app:single_choice="true" />
+
+    <View
+        android:id="@+id/out_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

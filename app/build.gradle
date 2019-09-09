@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.liangzhiyang.youmi"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('youmi.jks')
+            storePassword "youmivip"
+            keyAlias "youmi"
+            keyPassword "youmivip"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    implementation files('libs/umeng-common-2.0.2.jar')
+    implementation files('libs/umeng-share-core-6.9.4.jar')
+    implementation files('libs/umeng-share-QQ-simplify-6.9.4.jar')
+    implementation files('libs/umeng-share-sina-simplify-6.9.4.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.4.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.4.jar')
+    implementation files('libs/umeng-sharetool-6.9.4.jar')
+
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //Retrofit相关
+    compile(['com.squareup.okhttp3:logging-interceptor:3.9.0',
+             'com.squareup.retrofit2:retrofit:2.3.0',
+             'com.squareup.retrofit2:adapter-rxjava2:2.3.0',
+             'com.squareup.retrofit2:converter-gson:2.3.0'])
+    //RxJava相关
+    compile(['io.reactivex.rxjava2:rxandroid:2.0.1',
+             'io.reactivex.rxjava2:rxjava:2.1.3'])
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //Logger
+    implementation 'com.orhanobut:logger:2.1.1'
+    //hawk存储
+    compile 'com.orhanobut:hawk:2.0.1'
+    //刷新
+//    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-20'
+//    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-andx-4'
+    //1.0.5 当1.1.0出现问题可以回退到1.0.5.1
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'//没有使用特殊Header，可以不加这行
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //    compile 'me.drakeet.multitype:multitype:4.0.0-alpha2'
+    implementation 'com.youth.banner:banner:1.4.9'
+    compile 'com.jaeger.statusbarutil:library:1.5.1'
+    compile 'com.android.support:gridlayout-v7:22.+'
+    compile 'com.android.support:support-v4:27.1.1'
+
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+//    implementation 'com.umeng.umsdk:common:1.5.4'
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+    implementation 'com.umeng.umsdk:utdid:1.1.5.3'
+    //PushSDK
+    implementation 'com.umeng.umsdk:push:5.0.2'
+}
+repositories {
+    mavenCentral()
+}

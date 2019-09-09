@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/transparent</item>
+        <item name="colorPrimaryDark">@color/default_white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="loading_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- 如果想设置后背景的透明度，则在backgroundDimEnabled为true的情况下设置以下属性 -->
+        <item name="android:backgroundDimAmount">0.6</item> <!-- 后背景的暗淡度 -->
+    </style>
+
+    <style name="pop_anim">
+        <item name="android:windowEnterAnimation">@anim/alpha_enter</item>
+        <item name="android:windowExitAnimation">@anim/alpha_out</item>
+    </style>
+
+    <declare-styleable name="MultiLineRadioGroup">
+        <attr name="child_margin_horizontal" format="dimension" />
+        <attr name="child_margin_vertical" format="dimension" />
+        <attr name="child_layout" format="integer" />
+        <attr name="child_count" format="integer" />
+        <attr name="child_values" format="integer" />
+        <attr name="single_choice" format="boolean" />
+        <attr name="gravity" format="integer" />
+    </declare-styleable>
+
+    　
+
+    <style name="translucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/half_trans</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否启用标题栏 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 是否使用背景半透明 -->
+    </style>
+
+</resources>

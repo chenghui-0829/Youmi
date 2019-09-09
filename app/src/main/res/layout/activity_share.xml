@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#01cecece"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/share_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/default_white"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="邀请好友"
+        android:textColor="@color/default_black"
+        android:textSize="17sp"
+        android:lineSpacingExtra="10dp"
+        />
+
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/default_white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:columnCount="3"
+        app:rowCount="2">
+
+        <TextView
+            android:id="@+id/share_weichat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/user_list_invitation_letter"
+            android:gravity="center_horizontal"
+            android:text="微信"
+            android:textColor="@color/default_black"
+            android:textSize="15sp"
+            app:layout_columnWeight="1"
+            />
+
+        <TextView
+            android:id="@+id/share_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/user_list_invitation_friend"
+            android:gravity="center_horizontal"
+            android:text="朋友圈"
+            android:textColor="@color/default_black"
+            android:textSize="15sp"
+            app:layout_columnWeight="1"
+            />
+
+        <TextView
+            android:id="@+id/share_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/user_list_invitation_qq"
+            android:gravity="center_horizontal"
+            android:text="QQ"
+            android:textColor="@color/default_black"
+            android:textSize="15sp"
+            app:layout_columnWeight="1" />
+
+        <TextView
+            android:id="@+id/share_qq_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/user_list_invitation_qq_space"
+            android:gravity="center_horizontal"
+            android:text="QQ空间"
+            android:textColor="@color/default_black"
+            android:textSize="15sp"
+            app:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/share_sine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/user_list_invitation_weibo"
+            android:gravity="center_horizontal"
+            android:text="微博"
+            android:textColor="@color/default_black"
+            android:textSize="15sp"
+            app:layout_columnWeight="1"
+            android:layout_marginTop="10dp"
+            />
+
+        <!--<TextView-->
+            <!--android:id="@+id/share_copy"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:drawableTop="@mipmap/user_list_invitation_copy"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:text="复制链接"-->
+            <!--android:textColor="@color/default_black"-->
+            <!--android:textSize="15sp"-->
+            <!--app:layout_columnWeight="1"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:visibility="gone"-->
+            <!--/>-->
+
+    </android.support.v7.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/share_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/default_white"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="取消"
+        android:textColor="@color/default_red"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    >
+
+    <include layout="@layout/layout_base_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/btn_loan_process" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:src="@mipmap/img_loans_flow" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="60dp"
+                android:src="@mipmap/btn_loan_skills" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:lineSpacingExtra="16dp"
+                android:text="@string/loans_skill"
+                android:textColor="@color/default_black"
+                android:textSize="13sp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@mipmap/img_loans_guide_bj"
+                    android:scaleType="centerCrop"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/btn_prompt_disable"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <ImageView
+                        android:id="@+id/start_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="33dp"
+                        android:layout_marginBottom="26dp"
+                        android:src="@mipmap/btn_immediately" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

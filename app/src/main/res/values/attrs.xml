@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MultipleStatusView"><attr format="reference" name="loadingView"/><attr format="reference" name="errorView"/><attr format="reference" name="emptyView"/><attr format="reference" name="noNetworkView"/><attr format="reference" name="contentView"/></declare-styleable>
+    <item name="content_view" type="id"/>
+    <item name="empty_retry_view" type="id"/>
+    <item name="empty_view" type="id"/>
+    <item name="error_retry_view" type="id"/>
+    <item name="error_view" type="id"/>
+    <item name="loading_view" type="id"/>
+    <item name="no_network_retry_view" type="id"/>
+    <item name="no_network_view" type="id"/>
+    <string name="empty_view_hint">暂无数据</string>
+    <string name="error_view_hint">加载失败</string>
+    <string name="no_network_view_hint">网络异常</string>
+    <style name="MultipleStatusView"/>
+    <style name="MultipleStatusView.Content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textColor">#a9b7b7</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <declare-styleable name="TextBannerViewStyle">
+        <attr name="setInterval" format="integer|reference"/>
+        <attr name="setAnimDuration" format="integer|reference"/>
+        <attr name="setTextSize" format="dimension|reference"/>
+        <attr name="setTextColor" format="color|reference"/>
+        <attr name="setSingleLine" format="boolean"/>
+
+        <attr name="setFlags">
+            <enum name="strike" value="0"/>
+            <enum name="underline" value="1"/>
+        </attr>
+        <attr name="setGravity">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+        <attr name="setDirection">
+            <enum name="bottom_to_top" value="0"/>
+            <enum name="top_to_bottom" value="1"/>
+            <enum name="right_to_left" value="2"/>
+            <enum name="left_to_right" value="3"/>
+        </attr>
+        <attr name="setTypeface">
+            <enum name="normal" value="0"/>
+            <enum name="bold" value="1"/>
+            <enum name="italic" value="2"/>
+            <enum name="italic_bold" value="3"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

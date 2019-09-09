@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_white"
+    android:id="@+id/smart_refreshlayout"
+    >
+
+    <com.scwang.smartrefresh.header.MaterialHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_base_toolbar"/>
+
+            <com.youth.banner.Banner
+                android:id="@+id/home_banner"
+                android:layout_width="match_parent"
+                android:layout_height="130dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                tools:background="#f4f4c1">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/home_btn_horn" />
+
+                <com.liangzhiyang.youmi.view.TextBannerView
+                    android:id="@+id/scroll_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:setDirection="bottom_to_top"
+                    app:setGravity="left"
+                    app:setTextColor="@color/default_green"
+                    app:setTextSize="12sp" />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="25dp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/home_btn_menu_recommended"
+                    android:gravity="center_horizontal"
+                    android:text="热门推荐"
+                    android:textColor="@color/default_black"
+                    android:textSize="14sp"
+                    android:id="@+id/rmtj_rb"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/home_btn_menu_latest"
+                    android:gravity="center_horizontal"
+                    android:text="最新上线"
+                    android:textColor="@color/default_black"
+                    android:textSize="14sp"
+                    android:id="@+id/zxsx_rb"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/home_btn_menu_lines"
+                    android:gravity="center_horizontal"
+                    android:text="小额极速"
+                    android:textColor="@color/default_black"
+                    android:textSize="14sp"
+                    android:id="@+id/xejs_rb"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/home_btn_menu_large"
+                    android:gravity="center_horizontal"
+                    android:text="大额低息"
+                    android:textColor="@color/default_black"
+                    android:textSize="14sp"
+                    android:id="@+id/deds_rb"
+                    />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#F2F2F2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="推荐产品"
+                android:textColor="@color/default_black"
+                android:textSize="17sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>
